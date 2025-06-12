@@ -75,7 +75,7 @@ def movimiento_ia(tablero):
                 tablero[i][j] = ia_simbolo
                 if hay_ganador(tablero):
                     return
-                tablero[i][j] = " " # Deshacer el movimiento
+                tablero[i][j] = " " 
 
     # 2. Verificar si el jugador puede ganar y bloquear
     for i in range(3):
@@ -83,9 +83,9 @@ def movimiento_ia(tablero):
             if tablero[i][j] == " ":
                 tablero[i][j] = jugador_simbolo
                 if hay_ganador(tablero):
-                    tablero[i][j] = ia_simbolo # Bloquear la jugada del jugador
+                    tablero[i][j] = ia_simbolo 
                     return
-                tablero[i][j] = " " # Deshacer el movimiento
+                tablero[i][j] = " " 
 
     # 3. Movimiento aleatorio si no hay jugadas ganadoras o de bloqueo
     casillas_vacias = [(i, j) for i in range(3) for j in range(3) if tablero[i][j] == " "]
